@@ -1,5 +1,7 @@
 # Stock Data App
 
+![Stock Data App Demo](demo.png)
+
 A professional React Native Expo application with Google authentication, real-time stock data, charts, and watchlist functionality built with Tamagui UI components.
 
 ## 🚀 Features
