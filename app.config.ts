@@ -37,5 +37,6 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     GOOGLE_WEB_CLIENT_ID: process.env.GOOGLE_WEB_CLIENT_ID,
     GOOGLE_IOS_CLIENT_ID: process.env.GOOGLE_IOS_CLIENT_ID,
     GOOGLE_ANDROID_CLIENT_ID: process.env.GOOGLE_ANDROID_CLIENT_ID,
+    RAPIDAPI_KEY: process.env.RAPIDAPI_KEY,
   },
 }) 

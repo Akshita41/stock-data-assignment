@@ -4,6 +4,7 @@ interface EnvironmentConfig {
   GOOGLE_WEB_CLIENT_ID: string
   GOOGLE_IOS_CLIENT_ID: string
   GOOGLE_ANDROID_CLIENT_ID: string
+  RAPIDAPI_KEY: string
 }
 
 const getEnvironmentConfig = (): EnvironmentConfig => {
@@ -13,6 +14,7 @@ const getEnvironmentConfig = (): EnvironmentConfig => {
     GOOGLE_WEB_CLIENT_ID: extra?.GOOGLE_WEB_CLIENT_ID || process.env.GOOGLE_WEB_CLIENT_ID || '',
     GOOGLE_IOS_CLIENT_ID: extra?.GOOGLE_IOS_CLIENT_ID || process.env.GOOGLE_IOS_CLIENT_ID || '',
     GOOGLE_ANDROID_CLIENT_ID: extra?.GOOGLE_ANDROID_CLIENT_ID || process.env.GOOGLE_ANDROID_CLIENT_ID || '',
+    RAPIDAPI_KEY: extra?.RAPIDAPI_KEY || process.env.RAPIDAPI_KEY || '',
   }
 }
 
@@ -24,7 +26,8 @@ export const validateEnvironment = (): boolean => {
   const requiredFields = [
     'GOOGLE_WEB_CLIENT_ID',
     'GOOGLE_IOS_CLIENT_ID', 
-    'GOOGLE_ANDROID_CLIENT_ID'
+    'GOOGLE_ANDROID_CLIENT_ID',
+    'RAPIDAPI_KEY'
   ]
 
   const missingFields = requiredFields.filter(field => !config[field as keyof EnvironmentConfig])
